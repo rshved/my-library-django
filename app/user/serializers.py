@@ -127,7 +127,7 @@ class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.User
         fields = ('name', 'surname', 'email', 'phone', 'avatar',
-                  'is_email_verified', 'is_phone_verified',)
+                  'is_email_verified', 'is_phone_verified', 'is_superuser')
 
 
 class UserUpdateSerializer(serializers.ModelSerializer):

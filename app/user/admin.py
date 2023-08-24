@@ -12,12 +12,12 @@ class UserAdmin(admin.ModelAdmin):
     list_display = (
         'email', 'name', 'surname', 'is_email_verified', 'is_phone_verified', 'created_at',
     )
-    fields = [
-        'email', 'name', 'phone', 'avatar',
-        'is_staff', 'is_email_verified', 'is_phone_verified', 'password',
-        'push_id', 'device_id', 'is_active',
-        'created_at', 'last_login',
-    ]
+    # fields = [
+    #     'email', 'name', 'phone', 'avatar',
+    #     'is_staff', 'is_email_verified', 'is_phone_verified', 'password',
+    #     'push_id', 'device_id', 'is_active',
+    #     'created_at', 'last_login',
+    # ]
     def has_delete_permission(self, request, obj=None):
         return obj != request.user
     

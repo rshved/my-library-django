@@ -1,5 +1,5 @@
 FROM python:3.11
-LABEL MAINTAINER="Pixelfield, s.r.o"
+LABEL MAINTAINER="Roman Shvietsov"
 
 ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get -y dist-upgrade
@@ -13,4 +13,4 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-CMD ["sh", "/scripts/celery_run.sh"]
+#CMD ["sh", "/scripts/celery_run.sh"]

@@ -60,7 +60,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 if DEBUG:
     ALLOWED_HOSTS += ['192.168.{}.{}'.format(i, j)
                       for i in range(256) for j in range(256)]
-    ALLOWED_HOSTS += ['127.0.0.1', '0.0.0.0']
+    ALLOWED_HOSTS += ['127.0.0.1', '0.0.0.0', 'localhost']
 
 # Application definition
 
